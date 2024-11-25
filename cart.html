@@ -115,15 +115,14 @@
             return encodeURIComponent(message);
         }
 
-        // Event listener for Order via WhatsApp
+       
         document.getElementById('order-via-whatsapp').addEventListener('click', function() {
-            const phoneNumber = '254779074681'; // Replace with your WhatsApp number (in international format without +)
+            const phoneNumber = '254779074681'; 
             const message = createWhatsAppMessage();
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
             window.open(whatsappUrl, '_blank');
         });
 
-        // Event listener for Order via Email
         document.getElementById('order-via-email').addEventListener('click', function() {
             let subject = encodeURIComponent("Order Details");
             let message = createWhatsAppMessage();
