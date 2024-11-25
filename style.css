@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007BFF; /* Blue theme color */
+    color: white;
+    box-sizing: border-box;
+    padding: 10px 10px;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding-top: 70px;  /*Space for fixed header */
+    
+   
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    width: 300px; /* Set a fixed width for product sections */
+    text-align: center;
+    
+}
+
+.product img {
+    width: 50%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+button {
+    background-color: #007BFF; /* Blue theme color */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+footer {
+    background-color: #007BFF; /* Blue theme color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+} 
+    }
+ 
+    

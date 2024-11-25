@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+   
+    <style>
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-item img {
+            margin-right: 15px;
+        }
+        .total {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="background-color: #007BFF; /* Blue theme color */
+    color: white;
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;">
+        <div class="logo">
+            <h1>Eco tufts and interior designs.</h1> 
+        </div>
+    <nav style="width: fit-content; right: inherit;">
+        <ul style="list-style-type: none; margin: 0; padding: 0; display: flex;">
+            <li style="margin-left: 20px;"><a style="color: white;text-decoration: none;" href="tutfying.html">Products</a></li>
+            <li style="margin-left: 20px;"><a style="color: white;text-decoration: none;" href="pages.html" target="_blank">Custom-made Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+    
+    <div class="container my-5">
+        <h1 class="mb-4 text-center">Your Shopping Cart</h1>
+        <div class="cart-items"></div>
+        <div class="total text-end mt-3">
+            <h2>Total Price: KSH: <span id="total-price">0.00</span></h2>
+        </div>
+        <div class="d-flex justify-content-end mt-4 gap-2">
+            <a href="#" class="btn btn-success" id="order-via-email">Order via Email</a>
+            <button class="btn btn-danger" id="order-via-whatsapp">Order via WhatsApp</button>
+            <button class="btn btn-secondary" id="continue-shopping"><a style="color: white;" href="tutfying.html">Continue Shopping</a></button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function loadCart() {
+            const storedCart = localStorage.getItem('cart');
+            if (storedCart) {
+                cart = JSON.parse(storedCart);
+                updateCart();
+            }
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.querySelector('.cart-items');
+            cartItemsContainer.innerHTML = ''; // Clear previous items
+            const totalPriceElement = document.getElementById('total-price');
+
+            let total = 0;
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                // Create a cart item element
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item', 'd-flex', 'align-items-center', 'justify-content-between');
+                cartItem.innerHTML = `
+                    <div class="d-flex align-items-center">
+                        <img src="${item.image}" alt="${item.name}" style="width: 150px; height: 150px;">
+                        <span class="ms-3">${item.name} (x${item.quantity}) - Ksh: ${itemTotal.toFixed(2)}</span>
+                        <button class="btn btn-sm btn-outline-danger" onclick="removeFromCart('${item.name}')">Remove</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+            });
+
+            totalPriceElement.textContent = total.toFixed(2);
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCart();
+        }
+
+        // Function to create the message for WhatsApp
+        function createWhatsAppMessage() {
+            let message = "I would like to place an order:\n \n";
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotalPrice = item.price * item.quantity;
+                message += `${item.name} (x${item.quantity}): Ksh ${item.price.toFixed(2)} each, Total: Ksh ${itemTotalPrice.toFixed(2)}\n`;
+                total += itemTotalPrice;
+            });
+
+            message += `\nGrand Total: Ksh ${total.toFixed(2)}`;
+            return encodeURIComponent(message);
+        }
+
+        // Event listener for Order via WhatsApp
+        document.getElementById('order-via-whatsapp').addEventListener('click', function() {
+            const phoneNumber = '254779074681'; // Replace with your WhatsApp number (in international format without +)
+            const message = createWhatsAppMessage();
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Event listener for Order via Email
+        document.getElementById('order-via-email').addEventListener('click', function() {
+            let subject = encodeURIComponent("Order Details");
+            let message = createWhatsAppMessage();
+            const emailUrl = `mailto:ecotuftsandinteriordesigns@gmail.com?subject=${subject}&body=${message}`;
+            window.location.href = emailUrl;
+        });
+
+        document.getElementById('continue-shopping').addEventListener('click', () => {
+            window.location.href = 'tutfying.html';
+        });
+
+        window.onload = loadCart;
+    </script>
+    
+    <footer style="
+        background-color: #007BFF; /* Blue theme color */
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;">
+        <p>&copy; 2024 Tufting Business. All rights reserved.</p>
+        <p>Email: <a style="color: white;" href="mailto:ecotuftsandinteriordesigns@gmail.com">ecotuftsandinteriordesigns@gmail.com</a></p>
+        <p>Phone: +254779074681</p>
+    </footer>
+</body>
+</html>

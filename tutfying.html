@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco tufts and interior designs. </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="html" href="pages.html">
+    <link rel="html" href="cart.html">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        header {
+            position: relative;
+            z-index: 2;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+        .active {
+            opacity: 1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif;">
+<header>
+    <div class="logo">
+        <h1>Eco tufts and interior designs.</h1>
+    </div>
+    <nav style="width: fit-content;">
+        <ul>
+            <li><a href="#About us"><i class="fas fa-info-circle"></i> About us</a></li>
+            <li><a href="#Products"><i class="fas fa-cogs"></i> Products</a></li>
+            <li><a href="#Contact us"><i class="fas fa-phone-alt"></i> Contact us</a></li>
+            <li><a href="cart.html" target=""><i class="fas fa-shopping-cart"></i> Shopping cart</a></li>
+            <li><a href="pages.html" target="_blank"><i class="fas fa-images"></i> Custom-made Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+    <div class="slider">
+        <div class="slide active">
+            <img src="https://kustomrug.com/cdn/shop/files/petal-tufted-runner-rug-light-greytufted-rugkustom-rug-finland-oy-928384.jpg?v=1719654594&width=2048" alt="Image 1"> 
+        </div>
+        <div class="slide">
+            <img src="https://www.daals.co.uk/cdn/shop/products/RG-BO03_main_31caeb97-61a3-4bfc-aa89-20bfac04f560.jpg?v=1657034375" alt="Image 2"> 
+        </div>
+        <div class="slide">
+            <img src="https://homesavers.ie/wp-content/uploads/2024/02/381574-grey-rise-and-shine-bath-mat.jpg" alt="Image 3"> 
+        </div>
+        <div class="slide">
+            <img src="https://res.cloudinary.com/companystore/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/webimages/59098_tufted_bath_rug_floral_stem_lifestyle?pgw=1" alt="Image 4"> 
+        </div>
+        
+        <div class="slide">
+            <img src="https://i.localised.com/img/uo/product/e1bc16c5-2f63-4f60-97d0-36045964860a_LARGE.jpg" alt="Image 6"> 
+        </div>
+        <h1 style="position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: whitesmoke;
+        font-size: 6em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        z-index: 10; /* Ensure text is above images */">Eco tufts and Interior Designs.</h1>
+    </div>
+
+    <main>
+        <section id="About us">
+            <h2 style="size: 500%;">About us</h2>
+            <p>Welcome to our tufting business! We specialize in creating beautiful and unique tufted decor items.</p>
+        <h2 style="text-align: justify; font-style: normal; font-family: 'Times New Roman', Times, serif; ">
+        
+            Eco Tufts and Interiors is a company dedicated to crafting sustainable and stylish home essentials. 
+            We specialize in hand-tufted mats that elevate your living spaces while minimizing our environmental impact. 
+            Our skilled artisans meticulously create door mats, bathroom mats, and seating room mats, using responsibly sourced materials. We believe in the power of design to enhance comfort and beauty, and our products reflect this commitment.
+            <ul>
+                <li> Our product range includes:</li>
+               
+           
+            <ul> <li>Door Mats: Welcoming guests with style and functionality.</li> 
+<li>Bathroom Mats: Adding a touch of luxury to your bathroom. </li>
+        <li> Seating Room Mats: Enhancing comfort and aesthetics in your living space.  </li> </ul>
+          By choosing Eco Tufts and Interiors, you're not just selecting a product; you're making a conscious choice to support sustainable practices and enhance your home with timeless elegance.
+        
+        </h2>
+        </section>
+        <h2 style="font-size: 300%; text-align: center; color: blue;"> Products</h2>
+        <section  id="Products">
+    
+<main style=" display: flex;flex-wrap: wrap; justify-content: space-around;padding: 20px;">
+            
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://kustomrug.com/cdn/shop/files/petal-tufted-runner-rug-light-greytufted-rugkustom-rug-finland-oy-928384.jpg?v=1719654594&width=2048" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A 60*60 Dinning room mat </p>
+                <p>Price: ksh 3500.00</p>
+                <button onclick="addToCart('A 60*60 Dinning room mat', 3500.00, 'https://kustomrug.com/cdn/shop/files/petal-tufted-runner-rug-light-greytufted-rugkustom-rug-finland-oy-928384.jpg?v=1719654594&width=2048')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img   style="height: auto; width: 100%;"     src="https://www.daals.co.uk/cdn/shop/products/RG-BO03_main_31caeb97-61a3-4bfc-aa89-20bfac04f560.jpg?v=1657034375" alt="Product 1"> <!-- Replace with your product image -->
+                <p> A 30*30 Door mat</p>
+                <p>Price: Ksh 1000.00</p>
+                <button onclick="addToCart('A 30*30 Door mat', 1000.00, 'https://www.daals.co.uk/cdn/shop/products/RG-BO03_main_31caeb97-61a3-4bfc-aa89-20bfac04f560.jpg?v=1657034375')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://homesavers.ie/wp-content/uploads/2024/02/381574-grey-rise-and-shine-bath-mat.jpg" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A 10*10 Door mat </p>
+                <p>Price: ksh 800.00</p>
+                <button onclick="addToCart('A 10*10 Door mat', 800.00, 'https://homesavers.ie/wp-content/uploads/2024/02/381574-grey-rise-and-shine-bath-mat.jpg')">Add to Cart</button>
+
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://i.etsystatic.com/37574609/r/il/d7e768/5349580499/il_570xN.5349580499_bejz.jpg" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A 5*5 Side bed  mat </p>
+                <p>Price: ksh 350.00</p>
+                <button onclick="addToCart('A 5*5 Side bed  mat', 350.00, 'https://i.etsystatic.com/37574609/r/il/d7e768/5349580499/il_570xN.5349580499_bejz.jpg')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://images.woodenstreet.de/image/cache/data%2Fcarpets%2Fbeige-and-ivory-abstract-pattern-hand-tufted-wool-carpet-5-x-2-feet%2Fupdated%2F1-750x650.jpg" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A 70*70 living  room mat </p>
+                <p>Price: ksh 7000.00</p>
+                <button onclick="addToCart('A 70*70 living  room mat', 7000.00, 'https://images.woodenstreet.de/image/cache/data%2Fcarpets%2Fbeige-and-ivory-abstract-pattern-hand-tufted-wool-carpet-5-x-2-feet%2Fupdated%2F1-750x650.jpg')">Add to Cart</button>
+            </section>
+            <section class="product">
+ <img    style="height: auto; width: 100%;"  src="https://mytuftedrugs.com/cdn/shop/products/rug-tufting-workshop-399669.jpg?v=1724336885&width=533" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A 10*10 Door mat </p>
+                <p>Price: ksh 800.00</p>
+                <button onclick="addToCart('A 10*10 Door mat', 800.00, 'https://mytuftedrugs.com/cdn/shop/products/rug-tufting-workshop-399669.jpg?v=1724336885&width=533')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://mandauefoam.ph/cdn/shop/files/107834ArishaHeatherTuftedRug140x200cm.png?v=1686637059&width=900" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A 70*70 Door mat </p>
+                <p>Price: ksh 7000.00</p>
+                <button onclick="addToCart('A 70*70 Door mat', 7000.00, 'https://mandauefoam.ph/cdn/shop/files/107834ArishaHeatherTuftedRug140x200cm.png?v=1686637059&width=900')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://www.dormvibes.com/cdn/shop/products/cute-heart-shaped-plush-tufted-carpets-rug-fashionable-fluffy-417446_1024x1024.webp?v=1709689718" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A 200*20 love-shaped Door mat </p>
+                <p>Price: ksh 850.00</p>
+                <button onclick="addToCart('A 200*20 love-shaped Door mat', 850.00, 'https://www.dormvibes.com/cdn/shop/products/cute-heart-shaped-plush-tufted-carpets-rug-fashionable-fluffy-417446_1024x1024.webp?v=1709689718')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://5.imimg.com/data5/SELLER/Default/2023/11/363412977/XX/JE/MV/202756072/42-250x250.jpg" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A 80*80 living room mat </p>
+                <p>Price: ksh 8000.00</p>
+                <button onclick="addToCart('A 80*80 living room mat ', 8000.00, 'https://5.imimg.com/data5/SELLER/Default/2023/11/363412977/XX/JE/MV/202756072/42-250x250.jpg')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://s.alicdn.com/@sc04/kf/H8a9b87a84a6f4943bcb709f1e9d7a914X.jpg_300x300.jpg" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A 80*80 custom-made mat </p>
+                <p>Price: ksh 700.00</p>
+                <button onclick="addToCart('A 80*80 custom-made mat', 700.00, 'https://s.alicdn.com/@sc04/kf/H8a9b87a84a6f4943bcb709f1e9d7a914X.jpg_300x300.jpg')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://ae-pic-a1.aliexpress-media.com/kf/S0a024279393c450cb374e84b37c0e98e4/LAKEA-Basketball-Tufted-Rugs-Doormat-Mat-Anti-Slip-Kitchen-Bedroom-Handmade-Tufted-Rug-Carpet-Living-Room.jpg_640x640Q90.jpg_.webp" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A circle-shaped mat </p>
+                <p>Price: ksh 500.00</p>
+                <button onclick="addToCart('A circle-shaped mat', 500.00, 'https://ae-pic-a1.aliexpress-media.com/kf/S0a024279393c450cb374e84b37c0e98e4/LAKEA-Basketball-Tufted-Rugs-Doormat-Mat-Anti-Slip-Kitchen-Bedroom-Handmade-Tufted-Rug-Carpet-Living-Room.jpg_640x640Q90.jpg_.webp')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://i.etsystatic.com/41106440/r/il/0c3e2e/5873183822/il_300x300.5873183822_m69t.jpg" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A custom-made mat </p>
+                <p>Price: ksh 1200.00</p>
+                <button onclick="addToCart('A custom-made mat', 1200.00, 'https://i.etsystatic.com/41106440/r/il/0c3e2e/5873183822/il_300x300.5873183822_m69t.jpg')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://i.localised.com/img/uo/product/e1bc16c5-2f63-4f60-97d0-36045964860a_LARGE.jpg" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A circle-shaped  mat </p>
+                <p>Price: ksh 800.00</p>
+                <button onclick="addToCart('A circle-shaped  mat ', 800.00, 'https://i.localised.com/img/uo/product/e1bc16c5-2f63-4f60-97d0-36045964860a_LARGE.jpg')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img    style="height: auto; width: 100%;"  src="https://5.imimg.com/data5/SELLER/Default/2021/11/EF/OS/HO/49357584/custom-hand-tufted-rugs-500x500.jpg" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A custom made mat </p>
+                <p>Price: ksh 1200.00</p>
+                <button onclick="addToCart('A custom made mat', 1200.00, 'https://5.imimg.com/data5/SELLER/Default/2021/11/EF/OS/HO/49357584/custom-hand-tufted-rugs-500x500.jpg')">Add to Cart</button>
+            </section>
+            <section class="product">
+                <img   style="height: auto; width: 100%;"  src="https://preview.redd.it/i-make-custom-tufted-rugs-v0-zt4w6em70b2a1.jpg?width=640&crop=smart&auto=webp&s=735a335bce441c879add54eec29bf8705f92e594" alt="Product 1"> <!-- Replace with your product image -->
+                <p>A custom made mat </p>
+                <p>Price: ksh 1000.00</p>
+                <button onclick="addToCart('A custom made mat', 1000.00, 'https://preview.redd.it/i-make-custom-tufted-rugs-v0-zt4w6em70b2a1.jpg?width=640&crop=smart&auto=webp&s=735a335bce441c879add54eec29bf8705f92e594')">Add to Cart</button>
+            </section>
+        
+
+        </main>
+    </section>
+            
+</div>
+    
+<section id="Contact us">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:ecotuftsandinteriordesigns@gmail.com">ecotuftsandinteriordesigns@gmail.com</a></p>
+    <p>Phone: +254779074681</p>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tufting Business. All rights reserved.</p>
+        <p>Email: <a href="mailto:ecotuftsandinteriordesigns@gmail.com">ecotuftsandinteriordesigns@gmail.com</a></p>
+        <p>Phone: +254779074681</p>
+    </footer>
+    <script>
+        let cart = [];
+    
+    // Function to add a product to the cart
+    function addToCart(name, price, image) {
+        // Create a product object
+        const product = { name, price, image, quantity: 1 };
+    
+        // Load existing cart from local storage
+        const storedCart = localStorage.getItem('cart');
+        if (storedCart) {
+            cart = JSON.parse(storedCart);
+        }
+    
+        // Check if the product already exists in the cart
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push(product);
+        }
+    
+        // Save the updated cart back to local storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} has been added to your cart!`);
+    }
+    
+    
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+    
+            function showSlide(index) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (index + totalSlides) % totalSlides; 
+                slides[currentSlide].classList.add('active');
+            }
+    
+            setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 3000); 
+    
+    </script>
+</body>
+</html>
